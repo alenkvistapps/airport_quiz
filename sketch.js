@@ -155,7 +155,7 @@ function touchMoved() {
   console.log('Moved');
 }
 
-function mouseReleased() {
+function mouseClicked() {
   console.log('touchEnd');
   // if (mapMoved) {
   //   mapMoved = false;
