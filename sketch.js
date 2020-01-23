@@ -25,6 +25,7 @@ let gameover = false;
 let score = -1;
 let counter = 0;
 let lastClicked;
+let mapMoved = false;
 const MAX_QUESTIONS = 10;
 const MAX_CLICK_RANGE = 40;
 const CLICK_ERROR = 1;
@@ -149,7 +150,16 @@ function gameOver() {
   gameover = true;
 }
 
+function touchMoved() {
+  mapMoved = true;
+  console.log('Moved');
+}
+
 function touchEnded() {
+  if (mapMoved) {
+    mapMoved = false;
+    return;
+  }
   if (!current || gameover) {
     restartGame();
     return;
