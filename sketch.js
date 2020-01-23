@@ -150,10 +150,10 @@ function gameOver() {
   gameover = true;
 }
 
-function touchMoved() {
-  mapMoved = true;
-  console.log('Moved');
-}
+// function touchMoved() {
+//   mapMoved = true;
+//   console.log('Moved');
+// }
 
 function touchEnded() {
   console.log('touchEnd');
