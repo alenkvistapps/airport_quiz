@@ -155,12 +155,12 @@ function touchMoved() {
   console.log('Moved');
 }
 
-function mouseClicked() {
+function touchEnded() {
   console.log('touchEnd');
-  // if (mapMoved) {
-  //   mapMoved = false;
-  //   return;
-  // }
+  if (mapMoved) {
+    mapMoved = false;
+    return;
+  }
   if (!current || gameover) {
     restartGame();
     return;
